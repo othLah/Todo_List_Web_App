@@ -1,0 +1,119 @@
+body{
+	background: url("body_back.jpg") no-repeat fixed;
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+#start{
+	align-items: flex-start;
+}
+#div1{
+	background-color: rgba(143, 143, 143, 0.6);
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#div2{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#div2 p{
+	font-family: Elephant, Algerian;
+	margin: 5px 7px 5px 7px;
+}
+#div2 form{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+input[type="text"]{
+	height: 27px;
+	border: 1px solid black;
+	border-radius: 3px;
+	font-family: "Agency FB";
+	font-size: 20px;
+	font-weight: bold;
+}
+input[type="submit"]{
+	height: 32px;
+	border: 1px solid black;
+	border-radius: 3px;
+	font-family: "Agency FB";
+	font-size: 20px;
+	font-weight: bold;
+}
+input[type="submit"]:hover{
+	background-color: rgb(98, 248, 255);
+}
+#div3{
+	width: 270px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+#div3 a{
+	text-decoration: none;
+}
+button{
+	height: 35px;
+	border: 1px solid black;
+	border-radius: 3px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+strong{
+	margin-left: 4px;
+}
+button:hover{
+	background-color: rgb(255, 192, 98);
+}
+ul{
+	padding: 0px;
+	width: 348.483px;
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+}
+.not_completed{
+	height: 27px;
+	width: 340px;
+	border: 1px solid black;
+	border-radius: 3px;
+	background-color: white;
+	font-family: "Agency FB";
+	font-size: 18px;
+	font-weight: bold;
+	padding-left: 5px;
+}
+.not_completed a{
+	text-decoration: none;
+	color: black;
+}
+.not_completed a:hover{
+	color: red;
+}
+.completed{
+	height: 27px;
+	width: 340px;
+	border: 1px solid black;
+	border-radius: 3px;
+	background-color: grey;
+	color: green;
+	font-family: "Agency FB";
+	font-size: 18px;
+	font-weight: bold;
+	text-decoration: line-through;
+	padding-left: 5px;
+}

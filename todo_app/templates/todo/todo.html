@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="{% static 'todo\todo.css' %}"/>
+		<title>Todo page</title>
+	</head>
+	{% if nbre_info_key > 12 %}
+	<body id="start">
+	{% else %}
+	<body>
+	{% endif %}
+		<div id="div1">
+			<div id="div2">
+				<p>WHAT IS YOUR PLAN FOR TODAY ???</p>
+				<form method="POST" action="{% url 'add_page' %}">
+				{% csrf_token %}
+					<p>{{ todo_form_key.plan }}</p>
+					<p><input type="submit" value="ADD"/></p>
+				</form>
+			</div>
+			<div id="div3">
+				<p>
+					<a href="{% url 'delete_completed_page' %}">
+						<button type="button">
+							<img src="{% static 'todo\images\garbage.ico' %}" alt="Delete Completed"/> <strong>Delete Completed</strong>
+						</button>
+					</a>
+				</p>
+				<p>
+					<a href="{% url 'delete_all_page' %}">
+						<button type="button">
+							<img src="{% static 'todo\images\garbage.ico' %}" alt="Delete All"/> <strong>Delete All</strong>
+						</button>
+					</a>
+				</p>
+			</div>
+			<div id="div4">
+				<ul>
+					{% for p in plans_key %}
+						{% if p.completed %}
+							<li class="completed">{{ p.plan }}</li>
+						{% else %}
+							<li class="not_completed"><a href="{% url 'completed_page' p.id %}">{{ p.plan }}</a></li>
+						{% endif %}	
+					{% endfor %}
+				</ul>
+			</div>
+			<div id="div4">
+				<p>© Copyright 2017</p>
+			</div>
+		</div>
+	</body>
+</html>
